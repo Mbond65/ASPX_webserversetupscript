@@ -1,0 +1,2 @@
+﻿New-NetFirewallRule -Description "Rule to allow remote management SQL connections" -DisplayName "SQL Management inbound" -Name "SQL Management inbound" -Enabled True -LocalPort 1433 -Profile Domain -Protocol "TCP" -RemoteAddress "10.100.10.0/23"
+New-NetFirewallRule -Description "Rule to allow remote IIS management connections" -DisplayName "IIS Management WMSVC" -Name "IIS Management WMSVC" -Enabled True -LocalPort 8172 -Profile Domain -Protocol "TCP" -RemoteAddress "10.100.10.0/23"
